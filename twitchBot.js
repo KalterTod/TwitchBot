@@ -1,5 +1,6 @@
 const tmi = require('tmi.js');
-const config = require('./config.js')
+const { config } = require('./config.js')
+const fetch = require('node-fetch');
 
 // Define configuration options
 const opts = {
@@ -21,12 +22,19 @@ client.connect();
 
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
-  if (self) { return; } // Ignore messages from the bot
 
-  // Remove whitespace from chat message
-  const commandName = msg.trim();
+  const query = `mutation ($message: String, $channelName: String){ createMessage (input: { message:$message channelName:$channelName }) { message { id message timestamp channelName } } }`
+  const vars = {
+    message: msg.trim(),
+    channelName: target
+  }
 
-  //TODO: post request
+  fetch('http://localhost:5000/graphql', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: query, variables: vars }),
+  })
+    .then(res => res.json());
 }
 
 // Called every time the bot connects to Twitch chat
