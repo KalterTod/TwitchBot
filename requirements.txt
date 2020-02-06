@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+sqlalchemy
+flask-migrate
+graphene
+graphene-sqlalchemy
