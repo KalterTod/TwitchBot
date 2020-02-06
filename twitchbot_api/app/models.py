@@ -1,7 +1,6 @@
 from app import db
 import datetime
 from sqlalchemy.sql import func
-import graphene
 
 class Message(db.Model):
     __tablename__ = 'messages'
