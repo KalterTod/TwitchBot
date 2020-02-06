@@ -1,5 +1,5 @@
+from app import app
 from flask import Flask
-app = Flask(__name__)
 
 @app.route('/mood')
 def get_mood():
