@@ -28,4 +28,4 @@ __0003__ - As a user, I want to be able to post messages to the database \
 __0004__ - As a twitchBot, I want to be able to connect to a twitch channel and post messages to the application database as they come in \
 __0005__ - As a user, I want to pull a channel's message rate (per minute and per second) \
 __0006__ - As a user, I want to be able to pull down a Twitch Channel's mood \
-__0007__ - As a developer, I want the twitchBot and flask API to have sufficient testing coverage \
+__0007__ - As a developer, I want the twitchBot and flask API to have sufficient testing coverage
