@@ -1,5 +1,10 @@
 # TwitchBot
 
+### Testing
+To Test the API (from root directory):
+
+`python3 -m unittest app/test_api.py`
+
 ### Features
 __0001__ - As a developer, I want the initial application setup \
 __0002__ - As a developer, I want to have the database created via flask and the necessary tables created via flask-migrate \
