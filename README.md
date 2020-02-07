@@ -19,7 +19,7 @@ You can change the Twitch Channel to trace in the config.js file (as well as use
 ### Testing
 To Test the API (from root directory):
 
-`python3 -m unittest app/test_api.py`
+`python3 -m unittest twitchbot_api/test_api.py`
 
 ### Features
 __0001__ - As a developer, I want the initial application setup \
