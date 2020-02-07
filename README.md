@@ -7,6 +7,7 @@ In one of the terminals, run the following commands: \
 
 In the other terminal run the following commands: \
 (Recommend to use a virtual environment, but not necessary)
+Requires Python 3.5
 `pip install -r requirements.txt` \
 Navigate into the `twitchbot_api` directory and run the following commands: \
 `flask db init` \
